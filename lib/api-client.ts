@@ -51,7 +51,7 @@ async function apiFetch<T = unknown>(
             ...options,
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': API_KEY,
+                'Authorization': `Bearer ${API_KEY}`,
                 ...options.headers,
             },
         });
